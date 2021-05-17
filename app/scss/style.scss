@@ -3,5 +3,93 @@
 @import 'reset'; //обнуление стилей
 @import 'global'; //глобальные стили, типо reset.css. Что-то для бади, ссылок
 
+.header {
+  padding: 50px 0;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.menu {
+  &__list {
+    display: flex;
+  }
+  &__list-item + .menu__list-item {
+    padding-left: 35px;
+  }
+  &__list-link {
+    color: $default;
+    @extend %rubik-500;
+    font-size: 15px;
+    line-height: 12px;
+  }
+}
+
+.user-nav {
+  display: flex;
+  &__link {
+    position: relative;
+  }
+  &__link-search,
+  .user-nav__link-cart {
+    margin-right: 80px;
+  }
+  &__link-heart {
+    margin-right: 60px;
+   }
+  &__num {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    top: -10px;
+    right: -14px;
+    font-size: 10px;
+    color: #243f4d;
+    text-align: center;
+    line-height: 20px;
+    @extend %dmsans-400;
+  }
+}
+  
+  .user-nav__link-search::before {
+    content: '';
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #edf1f4;
+    position: absolute;
+    z-index: -1;
+    right: -17px;
+    bottom: -12px;
+  }
+
+  .user-nav__link-heart::before {
+    content: "";
+    height: 50px;
+    width: 180px;
+    border-radius: 25px;
+    position: absolute;
+    background: #fcd7b6;
+    z-index: -1;
+    left: -40px;
+    top: -18px;
+  }
+
+  .user-nav__link-menu::before {
+    content: '';
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #a3bbc8;
+    position: absolute;
+    z-index: -1;
+    right: -14px;
+    top: -15px;
+  }
+
 
 @import 'media'; // здесь медиа запросы

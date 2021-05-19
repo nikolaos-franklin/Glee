@@ -1,6 +1,7 @@
 @import 'vars'; //пишутся переменные для цвета, шрифта и т.д. 
 @import 'fonts'; 
 @import 'reset'; //обнуление стилей
+@import 'libs';
 @import 'global'; //глобальные стили, типо reset.css. Что-то для бади, ссылок
 
 .header {
@@ -100,6 +101,7 @@
   padding: 60px 0 75px;
   border-bottom: 1px solid #dae4e9;
   @extend %text;
+  justify-content: space-between;
   &__logo {
     margin-bottom: 20px;
     display: block;
@@ -180,8 +182,81 @@
     padding-left: 10px;
     border-left: 1px solid #7b7b7b;
   }
-  
 }
+
+.top-slider {
+  &__img {
+    position: relative
+  }
+  &__content {
+    position: absolute;
+    z-index: 1;
+    width: 520px;
+    padding-top: 80px;
+    padding-left: 80px;
+  }
+  &__title {
+    @extend %rubik-500;
+    font-size: 72px;
+    line-height: 70px;
+    color: #243f4d;
+    margin-bottom: 40px;
+  }
+  &__text {
+    @extend %rubik-400;
+    font-size: 18px;
+    line-height: 30px;
+    width: 380px;
+    color: #436372;
+    margin-bottom: 40px;
+  }
+  &__link {
+    padding: 20px 100px 20px 20px;
+    background-color: #a3bbc8;
+    color: #fff;
+    @extend %rubik-500;
+    font-size: 15px;
+    line-height: 12px;
+    position: relative;
+  }
+  .top-slider__link span {
+    position: absolute;
+    right: 15px;
+    top: 40%;
+  }
+}
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: -70px;
+  li {
+    margin-right: 10px;
+    button {
+      background-color: #fde3cc;
+      border: none;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      position: relative;
+      @extend %rubik-500;
+      font-size: 11px;
+      line-height: 9px;
+      color: #667983;
+      cursor: pointer;
+
+    }
+
+    &.slick-active {
+      button {
+        background-color: #fff;
+        color: #243f4d;
+      }
+    }
+  }
+}
+ 
+
   
   
 

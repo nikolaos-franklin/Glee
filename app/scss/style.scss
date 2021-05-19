@@ -29,73 +29,71 @@
 
 .user-nav {
   display: flex;
-  &__link {
+  &__btn {
     position: relative;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
   }
-  &__link-search,
-  .user-nav__link-cart {
-    margin-right: 80px;
+  &__btn-search,
+  &__btn-menu {
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
   }
-  &__link-heart {
-    margin-right: 60px;
-   }
+  &__btn-search {
+    background-color: #edf1f4;
+    margin-right: 20px;
+  }
+  &__btn-menu {
+    background-color: #a3bbc8;
+  }
+  &__btn-heart,
+  &__btn-cart {
+    width: 90px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    background-color: #fcd7b6;
+  }
+  &__btn-cart {
+    margin-right: 20px;
+    border-radius: 0 50px 50px 0;
+  }
+  &__btn-heart {
+    border-radius: 50px 0 0 50px;
+  }
   &__num {
     position: absolute;
     width: 20px;
     height: 20px;
     border-radius: 50%;
     background-color: #fff;
-    top: -10px;
-    right: -14px;
+    top: 7px;
+    right: 22px;
     font-size: 10px;
     color: #243f4d;
     text-align: center;
     line-height: 20px;
     @extend %dmsans-400;
   }
-  &__link-search::before {
-    content: '';
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: #edf1f4;
-    position: absolute;
-    z-index: -1;
-    right: -17px;
-    bottom: -12px;
-  }
-  &__link-heart::before {
-    content: "";
-    height: 50px;
-    width: 180px;
-    border-radius: 25px;
-    position: absolute;
-    background: #fcd7b6;
-    z-index: -1;
-    left: -40px;
-    top: -18px;
-  }
-  &__link-heart::after {
+
+  &__btn-heart::after {
     content: '';
     width: 1px;
     height: 32px;
     background-color: #fde7d3;
-    top: -10px;
-    left: 50px;
+    top: 10px;
+    left: 90px;
     z-index: 2;
     position: absolute;
+    cursor: default;
   }
-   &__link-menu::before {
-     content: '';
-     width: 50px;
-     height: 50px;
-     border-radius: 50%;
-     background: #a3bbc8;
-     position: absolute;
-     z-index: -1;
-     right: -14px;
-     top: -15px;
-   }
+  
 }
   
   

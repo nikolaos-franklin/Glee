@@ -30,3 +30,10 @@ $accent: #a3bbc8;
   color: #7b7b7b;
 }
 
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}

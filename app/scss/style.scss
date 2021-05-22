@@ -314,6 +314,7 @@
      display: grid;
      grid-template-columns: repeat(4, 1fr);
      grid-gap: 30px;
+     transition: opacity .3s;
   }
   
   &__item {
@@ -358,15 +359,17 @@
     font-size: 40px;
     opacity: 0;
     transition: opacity .3s;
-  }
+    }
+  
   .products-nav__item:hover {
     background-color: #a3bbc8;
 
     path {
       fill: #fff;
     }
+   }
   }
-}
+
 .products__item:hover .products-nav__item {
   opacity: 1;
   transition: opacity .3s;
@@ -428,6 +431,16 @@
   }
 }
 
+.video {
+  &__poppup {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 
 
 

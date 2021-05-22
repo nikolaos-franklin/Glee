@@ -6,6 +6,11 @@
 
 .header {
   padding: 50px 0;
+  &__container {
+    max-width: 1800px;
+    padding: 0 10px;
+    margin: 0 auto;
+  }
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -51,21 +56,21 @@
     margin-right: 20px;
   }
   &__btn-menu {
-    background-color: #a3bbc8;
+    background-color: $accent;
   }
-  &__btn-heart,
-  &__btn-cart {
+  &__link-heart,
+  &__link-cart {
     width: 90px;
     height: 50px;
     display: flex;
     align-items: center;
     background-color: #fcd7b6;
   }
-  &__btn-cart {
+  &__link-cart {
     margin-right: 20px;
     border-radius: 0 50px 50px 0;
   }
-  &__btn-heart {
+  &__link-heart {
     border-radius: 50px 0 0 50px;
   }
   &__num {
@@ -138,10 +143,11 @@
   }
   &__form-input {
     border: none;
-    padding: 10px 75px 10px 15px;
+    padding: 9px 75px 10px 15px;
     line-height: 1px;
     background-color: #fef7f0;
-    max-width: 170px;
+    max-width: 173px;
+    margin-right: -3px;
   }
   &__form-input::placeholder {
     @extend %dmsans-400;
@@ -152,7 +158,7 @@
   &__form-btn {
     border: none;
     color: #fff;
-    background-color: rgb(163, 187, 200);
+    background-color: $accent;
     @extend %dmsans-400;
     font-size: 12px;
     padding: 2px 20px;
@@ -165,35 +171,39 @@
   padding: 35px 0 40px;
   align-items: center;
   &__copy,
-  &__link {
+  &__link,
+  &__item-nav {
     @extend %text;
+    line-height: 20px;
   }
   &__nav {
     display: flex;
     position: relative;
   }
-  &__item {
-    @extend %text;
-  }
-  &__item:not(:last-child) {
+  &__item-nav:not(:last-child) {
     padding-right: 10px;
   }
-  &__item:not(:first-child) {
+  &__item-nav:not(:first-child) {
     padding-left: 10px;
     border-left: 1px solid #7b7b7b;
   }
 }
 
 .top-slider {
+  &__container {
+    max-width: 1800px;
+    padding: 0 10px;
+    margin: 0 auto;
+  }
   &__img {
     position: relative
   }
   &__content {
     position: absolute;
     z-index: 1;
-    width: 520px;
-    padding-top: 80px;
-    padding-left: 80px;
+    width: 650px;
+    padding-top: 215px;
+    padding-left: 225px;
   }
   &__title {
     @extend %rubik-500;
@@ -212,7 +222,7 @@
   }
   &__link {
     padding: 20px 100px 20px 20px;
-    background-color: #a3bbc8;
+    background-color: $accent;
     color: #fff;
     @extend %rubik-500;
     font-size: 15px;
@@ -229,7 +239,7 @@
 .slick-dots {
   display: flex;
   justify-content: center;
-  margin-top: -70px;
+  margin-top: -80px;
   li {
     margin-right: 10px;
     button {
@@ -255,6 +265,189 @@
     }
   }
 }
+.info {
+  margin-bottom: 70px;
+  &__items {
+    background-color: #fef7f0;
+    display: flex;
+  }
+  &__item {
+    display: flex;
+    padding: 70px 30px 40px;
+    justify-content: center;
+    width: 100%;
+  }
+  &__item:not(:last-child) {
+    border-right: 1px solid #e8e4df;
+  }
+
+  &__item-content{
+    max-width: 240px;
+    padding-left: 25px;
+  }
+  &__item-title {
+    @extend %dmsans-700;
+    font-size: 16px;
+    line-height: 40px;
+    color: #414141;
+    margin-bottom: 5px;
+  }
+  &__item-text {
+    @extend %dmsans-400;
+    font-size: 16px;
+    line-height: 30px;
+  }
+}
+
+.products {
+  padding: 10px 0 160px;
+  &__filter {
+    margin-bottom: 70px;
+    text-align: center;
+  }
+  &__filter-btn {
+    cursor: pointer;
+  }
+  &__items {
+     font-size: 16px;
+     line-height: 40px;
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     grid-gap: 30px;
+     transition: opacity .3s;
+  }
+  
+  &__item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 270px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    padding: 30px 40px;
+    min-height: 380px;
+    position: relative;
+  }
+  &__item-photo {
+    margin: auto;
+  }
+  &____item-title {
+    @extend %dmsans-400;
+    color: #243f4d;
+  }
+  &__item-price {
+    @extend %dmsans-700;
+    color: #a3bbc8;
+  }
+}
+.mixitup-control-active {
+  color: rgb(26, 26, 26);
+}
+.products-nav {
+  height: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__item {
+    background-color: #fff;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    margin: 7px;
+    font-size: 40px;
+    opacity: 0;
+    transition: opacity .3s;
+    }
+  
+  .products-nav__item:hover {
+    background-color: #a3bbc8;
+
+    path {
+      fill: #fff;
+    }
+   }
+  }
+
+.products__item:hover .products-nav__item {
+  opacity: 1;
+  transition: opacity .3s;
+}
+
+.advertising {
+  &__container {
+    max-width: 1800px;
+    padding: 0 10px;
+    margin: 0 auto;
+  }
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+  }
+  &__item {
+    background-color: #feefe2;
+    color: #243f4d;
+    position: relative;
+    padding: 80px 140px 80px 380px;
+    width: 870px;
+  }
+  &__item:first-child{
+    margin-right: 30px;
+  }
+  &__image {
+    position: absolute;
+    top: -95px;
+    left: 115px;
+    height: 410px;
+  }
+  &__title {
+    @extend %dmsans-700;
+    font-size: 26px;
+    line-height: 32px;
+    margin-bottom: 20px;
+  }
+  &__text {
+    @extend %rubik-400;
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 25px;
+  }
+  &__link {
+    padding: 20px 80px 20px 20px;
+    border: 1px solid #b3b7b5;
+    border-radius: 5px;
+    color: #436372;
+    @extend %rubik-500;
+    font-size: 15px;
+    line-height: 12px;
+    position: relative;
+  }
+  &__link span {
+    position: absolute;
+    right: 15px;
+    top: 40%;
+  }
+}
+
+.video {
+  &__poppup {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+
+
+
+
+
  
 
   

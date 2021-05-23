@@ -136,6 +136,10 @@
   }
   &__link {
     @extend %text;
+    transition: all .3s;
+  }
+  &__link:hover {
+    color: $accent;
   }
   &__text {
     margin-bottom: 30px;
@@ -175,6 +179,10 @@
   &__item-nav {
     @extend %text;
     line-height: 20px;
+    transition: all .3s;
+  }
+  &__link:hover {
+    color: $accent;
   }
   &__nav {
     display: flex;
@@ -350,6 +358,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   &__item {
     background-color: #fff;
     border-radius: 50%;
@@ -358,12 +367,11 @@
     margin: 7px;
     font-size: 40px;
     opacity: 0;
-    transition: opacity .3s;
+
     }
   
   .products-nav__item:hover {
     background-color: #a3bbc8;
-
     path {
       fill: #fff;
     }
@@ -442,8 +450,47 @@
   }
 }
 
-
-
+.design {
+  &__inner {
+    margin-bottom: 120px;
+  }
+  &__filter {
+    margin-bottom: 70px;
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+  }
+  &__item {
+    max-width: 370px;
+    height: 245px;
+    background-color: rgb(248, 248, 248);
+    padding: 40px 0 0 35px;
+    position: relative;
+    @extend %dmsans-700;
+    background-repeat: no-repeat;
+  }
+  &__item-title {
+    font-size: 20px;
+    color: $title;
+    max-width: 200px;
+    transition: all .3s;
+  }
+  &__item-title:hover {
+    color: #a9bfcb;
+  }
+  &__item-style {
+    color: #a9bfcb;
+    font-size: 16px;
+  }
+  &__item-box {
+    max-width: 370px;
+  }
+  &__item-photo {
+    position: absolute;
+  }
+}
 
 
 

@@ -8,6 +8,11 @@ $accent: #a3bbc8;
   font-weight: 700;
 }
 
+%dmsans-500 {
+  font-family: "DMSans-Medium", sans serif;
+  font-weight: 500;
+}
+
 %dmsans-400 {
   font-family: "DMSans-Regular", sans serif;
   font-weight: 400;
@@ -23,6 +28,10 @@ $accent: #a3bbc8;
   font-weight: 400;
 }
 
+%myriadpro-400 {
+  font-family: "MyriadProRegular";
+  font-weight: 400;
+}
 %text {
   @extend %rubik-400;
   font-size: 14px;

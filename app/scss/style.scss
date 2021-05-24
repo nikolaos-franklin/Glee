@@ -21,19 +21,47 @@
 .menu {
   &__list {
     display: flex;
+    position: relative;
   }
+
   &__list-item + .menu__list-item {
     padding-left: 35px;
   }
+
+  &__list-item {
+    display:inline-block;
+  }
+  
   &__list-link {
     color: $default;
     @extend %rubik-500;
     font-size: 15px;
     line-height: 12px;
   }
-  &__list-link:hover {
+
+  &__list-link:hover  {
     border-bottom: 1px solid $title;
   }
+
+  &__list>li:hover .sub-menu__list {
+    display: block;
+  }
+}
+
+.sub-menu__list {
+  display: none;
+  position: absolute;
+  top: 30px;
+  z-index: 1;
+}
+
+.sub-menu__link {
+  color: $default;
+  @extend %rubik-500;
+  
+}
+.sub-menu__link:hover {
+  color: $accent;
 }
 
 .user-nav {

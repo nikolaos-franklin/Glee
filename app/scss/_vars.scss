@@ -1,6 +1,7 @@
 $default: #436372;
 $title: #191919;
 $accent: #a3bbc8;
+$bg: #edf1f4;
 
 
 %dmsans-700{
@@ -26,6 +27,11 @@ $accent: #a3bbc8;
 %rubik-400 {
   font-family: "Rubik-Regular", sans serif;
   font-weight: 400;
+}
+
+%rubik-300 {
+  font-family: "Rubik-Light";
+  font-weight: 300;
 }
 
 %myriadpro-400 {

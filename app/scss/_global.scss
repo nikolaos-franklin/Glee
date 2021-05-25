@@ -42,6 +42,45 @@ main {
   cursor: pointer;
 }
 
+.parnters__login-page {
+  padding: 65px 0 65px !important;
+}
+
+.breadcrumbs {
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @extend %rubik-400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #83898f;
+  }
+  &__item:not(:last-child) {
+    margin-right: 20px;
+  }
+  &__item {
+    position: relative;
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+  }
+  &__item::after {
+    content: '/';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    left: 45px;
+  }
+  &__link {
+    color: inherit;
+  }
+}
+
+
+
 
 
 

@@ -42,7 +42,7 @@ main {
   cursor: pointer;
 }
 
-.parnters__login-page {
+.parnters--login-page {
   padding: 65px 0 65px !important;
 }
 
@@ -76,6 +76,13 @@ main {
   }
   &__link {
     color: inherit;
+  }
+}
+
+.blog--new-page {
+  margin-bottom: 25px !important;
+  h3.title {
+    color: #243f4d;
   }
 }
 

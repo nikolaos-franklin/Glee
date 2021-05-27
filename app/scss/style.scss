@@ -867,6 +867,32 @@
   }
 }
 
+.success {
+  padding: 90px 0 80px;
+  background-color: #fcd7b6;
+  margin-bottom: 120px;
+  &__items {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    @extend %dmsans-700;
+    line-height: 32px;
+    color: #243f4d;
+  }
+  &__img {
+    display: inline-block;
+    margin-bottom: 15px;
+  }
+  &__title {
+   font-size: 36px;
+   margin-bottom: 15px;
+  }
+  &__text {
+    font-size: 18px;
+  }
+}
+
 
 
 

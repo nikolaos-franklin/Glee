@@ -870,7 +870,6 @@
 .success {
   padding: 90px 0 80px;
   background-color: #fcd7b6;
-  margin-bottom: 120px;
   &__items {
     display: flex;
     justify-content: space-around;
@@ -892,6 +891,108 @@
     font-size: 18px;
   }
 }
+
+.team {
+  padding: 120px 0 100px;
+  &__box {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__content {
+    max-width: 330px; 
+    color: #243f4d;
+  }
+  &__content-title {
+    @extend %dmsans-700;
+    font-size: 36px;
+    line-height: 32px;
+    margin-bottom: 30px;
+  }
+  &__content-text {
+    @extend %rubik-400;
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 40px;
+  }
+  &__content-link {
+    padding: 16px 60px 16px 16px;
+    color: #fff;
+    background-color: #a3bbc8;
+    @extend %poppins-600;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+  }
+  &__content-link::after {
+    content: '';
+    position: absolute;
+    background-image: url('../images/decor-icons/white-arrow.svg');
+    width: 15px;
+    height: 11px;
+    top: 20px;
+    right: 25px;
+  }
+  &__people {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 35px;
+  }
+  &__image {
+    max-width: 370px;
+    position: relative;
+    margin-bottom: 65px;
+  }
+  &__description {
+    padding: 30px 20px 25px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 325px;
+    background-color: #fff;
+    margin-top: -115px;
+    position: absolute;
+    margin-bottom: 40px;
+    box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
+  }
+  &__description-left {
+    padding-right: 55px;
+  }
+  &__people-name {
+    @extend %dmsans-700;
+    font-size: 22px;
+    line-height: 26px;
+    color: #436372;
+    margin-bottom: 10px;
+    width: 145px;
+  }
+  &__people-position {
+    @extend %rubik-400;
+    font-size: 16px;
+    line-height: 30px;
+    color: #565872;
+  }
+  &__description-social {
+    display: flex;
+    align-items: center;
+  }
+  &__social-insta,
+  &__social-google {
+    border-radius: 50%;
+    background-color: rgb(246, 246, 246);
+    padding: 10px;
+    margin-left: 5px;
+    width: 40px;
+    height: 40px;
+  } 
+  
+}
+
+
+
+
+
+
+
 
 
 

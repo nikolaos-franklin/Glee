@@ -86,6 +86,40 @@ main {
   }
 }
 
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__list {
+    display: flex;
+  }
+  &__item {
+    margin-right: 16px;
+  }
+  &__link,
+  &__next {
+    @extend %rubik-400;
+    font-size: 16px;
+    color: #243f4d;
+    line-height: 1.875;
+    padding: 15px 20px;
+    border: 1px solid rgb(163, 187, 200);
+  }
+  &__link--active {
+    background-color: #a3bbc8;
+    @extend %rubik-400;
+    font-size: 16px;
+    color: #243f4d;
+    line-height: 1.875;
+    padding: 15px 20px;
+    border: 1px solid rgb(163, 187, 200);
+    color: #fff;
+  }
+  &__next {
+    
+     line-height: 1.235;
+  }
+}
 
 
 

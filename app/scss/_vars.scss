@@ -55,6 +55,21 @@ $bg: #edf1f4;
   color: #7b7b7b;
 }
 
+%filter {
+  @extend %rubik-400;
+  font-size: 16px;
+  line-height: 43px;
+  color: #243f4d;
+}
+
+%checkbox-hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
+}
+
 @function max($numbers...) {
   @return m#{a}x(#{$numbers});
 }

@@ -42,6 +42,86 @@ main {
   cursor: pointer;
 }
 
+.parnters--login-page {
+  padding: 65px 0 65px !important;
+}
+
+.breadcrumbs {
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @extend %rubik-400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #83898f;
+  }
+  &__item:not(:last-child) {
+    margin-right: 20px;
+  }
+  &__item {
+    position: relative;
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+  }
+  &__item::after {
+    content: '/';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    left: 45px;
+  }
+  &__link {
+    color: inherit;
+  }
+}
+
+.blog--new-page {
+  margin-bottom: 25px !important;
+  h3.title {
+    color: #243f4d;
+  }
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__list {
+    display: flex;
+  }
+  &__item {
+    margin-right: 16px;
+  }
+  &__link,
+  &__next {
+    @extend %rubik-400;
+    font-size: 16px;
+    color: #243f4d;
+    line-height: 1.875;
+    padding: 15px 20px;
+    border: 1px solid rgb(163, 187, 200);
+  }
+  &__link--active {
+    background-color: #a3bbc8;
+    @extend %rubik-400;
+    font-size: 16px;
+    color: #243f4d;
+    line-height: 1.875;
+    padding: 15px 20px;
+    border: 1px solid rgb(163, 187, 200);
+    color: #fff;
+  }
+  &__next {
+    
+     line-height: 1.235;
+  }
+}
+
+
 
 
 

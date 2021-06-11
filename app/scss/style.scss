@@ -112,6 +112,7 @@
     width: 1px;
     background-color: #fde7d3;
     right: 0;
+    z-index: 2;
   }
   &__num {
     position: absolute;
@@ -500,6 +501,9 @@
     margin: 7px;
     font-size: 40px;
     opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     }
   
   .products-nav__item:hover {
@@ -1295,9 +1299,10 @@
  }
 
  .product-details {
-   padding: 118px 0 100px;
+   padding: 118px 0 125px;
    &__inner {
      display: flex;
+     margin-bottom: 100px;
    }
    &__slide {
      margin-right: 65px;
@@ -1365,9 +1370,6 @@
        color: #243f4d;
        cursor: pointer;
      }
-   }
-   &__input {
-    //  margin-bottom: 55px;
    }
    &__btn {
      background-color: $accent;
@@ -1469,17 +1471,82 @@
     background-color: #333333;
   }
  
+  .product-tabs {
+    &__top {
+      margin-bottom: 35px;
+    }
+    &__item {
+      @extend %rubik-500;
+      font-size: 18px;
+      line-height: 40px;
+      color: #243f4d;
+      background-color: #edf1f4;
+      border-radius: 5px;
+      width: 240px;
+      display: inline-block;
+      text-align: center;
+      padding: 10px 0;
+      &+.product-tabs__item {
+        margin-left: 13px;
+      }
+    }
+    &__item--active {
+      background-color: $accent;
+      color: #fff;
+    }
+    &__items {
+      display: none;
+    }
+    &__items--active {
+      display: block;
+    }
+  }
+
+ .related {
+   padding-bottom: 110px;
+   &__top {
+     display: flex;
+     justify-content: space-between;
+     align-items: baseline;
+   }
+   &__title {
+     @extend %dmsans-700;
+     font-size: 36px;
+     color: #243f4d;
+     text-align: left;
+     margin-bottom: 70px;
+   }
+   &__buttons {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+   }
+   &__btn {
+     background-color: transparent;
+     border: 2px solid #edf1f4;
+     border-radius: 5px;
+     width: 46px;
+     height: 46px;
+     cursor: pointer;
+     transition: all .3s;
+     padding: 10px;
+     &+.related__btn {
+       margin-left: 20px;
+     }
+   }
+   &__btn:hover {
+     border-color: #a3bbc8;
+   }
+   &__content {
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+
+   }
+ }
+
+
 
  
-
-
-
-
-
-
-
-
-
 
 
 

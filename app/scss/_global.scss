@@ -118,6 +118,34 @@ main {
   }
 }
 
+.search {
+  margin-bottom: 60px;
+  &__form {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #edf1f4;
+    border-radius: 5px;
+  }
+  &__input {
+    width: 221px;
+    height: 43px;
+    border: none;
+  }
+  &__btn {
+    border: none;
+    height: 43px;
+    width: 48px;
+    background-color: #edf1f4;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  &__img {
+    margin: 0 auto;
+  }
+}
+
+
+
 
 
 

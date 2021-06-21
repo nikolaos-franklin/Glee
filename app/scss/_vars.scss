@@ -47,6 +47,10 @@ $bg: #edf1f4;
   font-family: "Poppins-SemiBold";
   font-weight: 600;
 }
+%poppins-700 {
+  font-family: "Poppins-Bold";
+  font-weight: 700;
+}
 
 %text {
   @extend %rubik-400;

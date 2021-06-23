@@ -1,0 +1,149 @@
+.header {
+  padding: 50px 0;
+
+  &__container {
+    max-width: 1800px;
+    padding: 0 10px;
+    margin: 0 auto;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.menu {
+  &__list {
+    display: flex;
+    position: relative;
+  }
+
+  &__list-item+.menu__list-item {
+    padding-left: 35px;
+  }
+
+  &__list-item {
+    display: inline-block;
+  }
+
+  &__list-link {
+    color: $default;
+    @extend %rubik-500;
+    font-size: 15px;
+    line-height: 12px;
+  }
+
+  &__list-link:hover {
+    border-bottom: 1px solid $title;
+  }
+
+  &__list>li:hover .sub-menu__list {
+    display: block;
+  }
+}
+
+.sub-menu__list {
+  display: none;
+  position: absolute;
+  top: 30px;
+  z-index: 1;
+}
+
+.sub-menu__link {
+  color: $default;
+  @extend %rubik-500;
+
+}
+
+.sub-menu__link:hover {
+  color: $accent;
+}
+
+.user-nav {
+  display: flex;
+
+  &__btn {
+    position: relative;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__btn-search,
+  &__btn-menu {
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__btn-search {
+    background-color: #edf1f4;
+    margin-right: 20px;
+  }
+
+  &__btn-menu {
+    background-color: $accent;
+  }
+
+  &__link-heart,
+  &__link-cart {
+    width: 90px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    background-color: #fcd7b6;
+  }
+
+  &__link-cart {
+    margin-right: 20px;
+    border-radius: 0 50px 50px 0;
+  }
+
+  &__link-heart {
+    border-radius: 50px 0 0 50px;
+    position: relative;
+  }
+
+  &__link-heart::before {
+    content: '';
+    position: absolute;
+    height: 32px;
+    width: 1px;
+    background-color: #fde7d3;
+    right: 0;
+    z-index: 2;
+  }
+
+  &__num {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    top: 7px;
+    right: 22px;
+    font-size: 10px;
+    color: #243f4d;
+    text-align: center;
+    line-height: 20px;
+    @extend %dmsans-400;
+  }
+
+  &__btn-heart::after {
+    content: '';
+    width: 1px;
+    height: 32px;
+    background-color: #fde7d3;
+    top: 10px;
+    left: 90px;
+    z-index: 2;
+    position: absolute;
+    cursor: default;
+  }
+}

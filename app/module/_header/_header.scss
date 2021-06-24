@@ -42,6 +42,9 @@
   &__list>li:hover .sub-menu__list {
     display: block;
   }
+  &__btn {
+    display: none;
+  }
 }
 
 .sub-menu__list {
@@ -145,5 +148,110 @@
     z-index: 2;
     position: absolute;
     cursor: default;
+  }
+} 
+
+@media (max-width: 1024px) {
+  .header {
+    padding: 25px 0;
+  }
+  .menu {
+    order: 1;
+    &__list {
+      top: 120px;
+      position: absolute;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background-color: #fff;
+      width: 100%;
+      left: 0;
+      transform: translateY(-200%);
+      z-index: 5;
+      transition: all .3s;
+      &.menu__list--active {
+        transform: translateY(0);
+        transition: all .3s;
+      }
+    }
+    &__list-item {
+      width: 100%;
+    }
+    &__list-link {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 15px 0;
+    }
+    .menu__list-item+.menu__list-item {
+      padding-left: 0;
+    }
+    &__btn {
+      display: block;
+      border: none;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #fcd7b6;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      span {
+        background-color:#243f4d;
+        width: 25px;
+        height: 3px;
+        position: absolute;
+      }
+      &::after,
+      &::before {
+        content: '';
+        position: absolute;
+        background-color:#243f4d;
+        width: 25px;
+        height: 3px;
+        padding: 0 5px;
+      }
+      &::after {
+        top: 14px;
+      }
+      &::before {
+        bottom: 14px;
+      }
+    }
+  }
+  .user-nav {
+    justify-content: flex-end;
+    width: 100%;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 560px) {
+  .header {
+    &__inner {
+      flex-wrap: wrap;
+    }
+  }
+  .menu {
+    order: 0;
+    &__list {
+      top: 170px;
+    }
+  }
+  .user-nav {
+    margin-top: 15px;
+    margin-right: 0;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .user-nav {
+    &__btn-search,
+    &__link-cart {
+      margin-right: 10px;
+    }
   }
 }

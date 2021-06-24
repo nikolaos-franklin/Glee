@@ -109,3 +109,34 @@
     border-left: 1px solid #7b7b7b;
   }
 }
+
+@media (max-width: 1024px) {
+  .footer-top {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 830px) {
+  .footer-top {
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-top {
+    justify-content: space-between;
+    padding-bottom: 50px;
+  }
+  .footer-bottom {
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    &__copy {
+      margin-bottom: 10px;
+      width: 100%;
+      display: block;
+    }
+  }
+}

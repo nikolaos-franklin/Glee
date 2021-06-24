@@ -1,0 +1,13 @@
+.partners {
+  position: relative;
+  padding: 250px 0 75px;
+  background-color: #fef7f0;
+  z-index: 1;
+
+  &__list {
+    height: 135px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}

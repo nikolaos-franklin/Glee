@@ -1,0 +1,12 @@
+.video {
+  padding-bottom: 120px;
+
+  &__poppup {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -1,0 +1,142 @@
+.footer-top {
+  display: flex;
+  padding: 60px 0 75px;
+  border-bottom: 1px solid #dae4e9;
+  @extend %text;
+  justify-content: space-between;
+
+  &__logo {
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  &__contact {
+    width: 250px;
+    margin-right: 45px;
+  }
+
+  &__adress,
+  &__phone,
+  &__email {
+    display: block;
+    margin-bottom: 15px;
+    line-height: 24px;
+  }
+
+  &__title {
+    @extend %dmsans-700;
+    font-size: 16px;
+    line-height: 21px;
+    color: #1f2044;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    padding-top: 20px;
+  }
+
+  &__list {
+    width: 250px;
+  }
+
+  &__link {
+    @extend %text;
+    transition: all .3s;
+  }
+
+  &__link:hover {
+    color: $accent;
+  }
+
+  &__text {
+    margin-bottom: 30px;
+    width: 270px;
+  }
+
+  &__form-input {
+    border: none;
+    padding: 9px 15px 10px 15px;
+    line-height: 1px;
+    background-color: #fef7f0;
+    max-width: 173px;
+    margin-right: -3px;
+  }
+
+  &__form-input::placeholder {
+    @extend %dmsans-400;
+    font-size: 12px;
+    color: #234969;
+  }
+
+  &__form-btn {
+    border: none;
+    color: #fff;
+    background-color: $accent;
+    @extend %dmsans-400;
+    font-size: 12px;
+    padding: 2px 20px;
+    cursor: pointer;
+  }
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 35px 0 40px;
+  align-items: center;
+
+  &__copy,
+  &__link,
+  &__item-nav {
+    @extend %text;
+    line-height: 20px;
+    transition: all .3s;
+  }
+
+  &__link:hover {
+    color: $accent;
+  }
+
+  &__nav {
+    display: flex;
+    position: relative;
+  }
+
+  &__item-nav:not(:last-child) {
+    padding-right: 10px;
+  }
+
+  &__item-nav:not(:first-child) {
+    padding-left: 10px;
+    border-left: 1px solid #7b7b7b;
+  }
+}
+
+@media (max-width: 1024px) {
+  .footer-top {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 830px) {
+  .footer-top {
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-top {
+    justify-content: space-between;
+    padding-bottom: 50px;
+  }
+  .footer-bottom {
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    &__copy {
+      margin-bottom: 10px;
+      width: 100%;
+      display: block;
+    }
+  }
+}

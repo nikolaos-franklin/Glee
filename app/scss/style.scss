@@ -416,7 +416,7 @@
     position: relative;
   }
 
-  &__input {
+  &__input { 
     @extend %checkbox-hidden;
 
     &:checked+.filter-category__checkbox {

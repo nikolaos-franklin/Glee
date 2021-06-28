@@ -200,3 +200,27 @@
   opacity: 1;
   transition: opacity .3s;
 }
+
+@media (max-width: 1200px) {
+  .products {
+    &__items {
+      justify-content: center;
+    }
+  }
+}
+
+@media (max-width: 820px) {
+  .products {
+    padding-bottom: 60px;
+  }
+}
+
+@media (max-width: 390px) {
+  .products {
+    &__filter-btn {
+      display: block;
+      padding: 10px 0;
+      width: 100%;
+  }
+ }
+}

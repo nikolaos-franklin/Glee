@@ -141,4 +141,12 @@
          height: 260px;
        }
      }
+     .top {
+       &__title {
+         font-size: 32px;
+       }
+     }
+     .conditions {
+       padding: 60px 0;
+     }
    }

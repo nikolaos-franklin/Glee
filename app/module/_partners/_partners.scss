@@ -8,6 +8,40 @@
     height: 135px;
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: center; 
+  }
+}
+
+.parnters--only {
+  padding: 65px 0 65px !important;
+}
+
+@media (max-width: 820px) {
+  .partners,
+  .parnters--only {
+    padding-bottom: 185px !important;
+    padding-top: 180px;
+
+    &__list {
+      flex-wrap: wrap;
+    }
+
+    &__list-item {
+      padding: 30px 45px;
+    }
+  }
+}
+
+@media (max-width: 685px) {
+  .partners,
+  .parnters--only {
+    padding-bottom: 270px !important;
+  }
+}
+
+@media (max-width: 470px) {
+  .partners,
+  .parnters--only {
+    padding-bottom: 485px !important;
   }
 }

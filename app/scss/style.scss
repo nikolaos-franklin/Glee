@@ -5,11 +5,6 @@
 @import 'global'; //глобальные стили, типо reset.css. Что-то для бади, ссылок
 
 
-
-
-
-
-
 .top {
   background-color: $bg;
   padding: 30px 0;
@@ -377,6 +372,9 @@
     width: 270px;
     margin-right: 30px;
   }
+  &__sorting {
+    display: none;
+  }
 }
 
 .filter {
@@ -416,7 +414,7 @@
     position: relative;
   }
 
-  &__input {
+  &__input { 
     @extend %checkbox-hidden;
 
     &:checked+.filter-category__checkbox {
@@ -681,6 +679,7 @@
     font-size: 16px;
     line-height: 30px;
     color: #243f4d;
+    width: 100%;
 
     a {
       color: #243f4d;
@@ -871,8 +870,9 @@
   }
 
   &__content {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    // display: grid;
+    // grid-template-columns: repeat(4, 1fr);
+    display: flex;
   }
 }
 

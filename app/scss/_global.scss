@@ -50,6 +50,7 @@ main {
   &__list {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
     @extend %rubik-400;
     font-size: 14px;

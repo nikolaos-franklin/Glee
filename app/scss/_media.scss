@@ -78,6 +78,32 @@
        display: none;
      }
    }
+   .product {
+     &__inner {
+       display: block;
+     }
+     &__sorting {
+       display: flex;
+       padding-left: 70px;
+     }
+     &__sorting-btn {
+       border: none;
+       background-color: transparent;
+       cursor: pointer;
+     }
+   }
+   .filter {
+     margin-right: 0;
+     display: none;
+     &__item {
+       width: 100%;
+     }
+   }
+   .product-content {
+     &__filter {
+       display: none;
+     }
+   }
  }
 
   @media (max-width: 1050px) {
@@ -106,7 +132,7 @@
   @media (max-width: 920px) {
     .products {
       &__item {
-        margin: 0 auto;
+        margin: 0 10px 30px 10px;
       }
     }
   }

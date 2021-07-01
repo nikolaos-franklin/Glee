@@ -1,5 +1,9 @@
 $(function(){
 
+  $('.product__sorting-btn').on('click', function(){
+   $('.filter').slideToggle();
+  });
+
   $('.menu__btn').on('click', function(){
     $('.menu__list').toggleClass('menu__list--active');
   });
@@ -8,8 +12,6 @@ $(function(){
     slidesToShow: 4,
     slidesToScroll: 1,
     arrows: true,
-    // draggable: false,
-    // variableWidth: true,
     prevArrow: $('.related__btn-prev'),
     nextArrow: $('.related__btn-next'),
     responsive: [

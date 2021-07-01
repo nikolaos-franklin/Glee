@@ -56,7 +56,60 @@
        margin-bottom: 30px;
      }
    }
+   .blog-page {
+     padding: 60px 0;
+     &__inner {
+       flex-direction: column;
+     }
+     &__content {
+       width: 100%;
+     }
+     &__aside {
+       order: -1;
+     }
+     &__img {
+       width: 100%;
+     }
+     &__img-link {
+       width: 100%;
+     }
+     &__filter-category,
+     &__recent {
+       display: none;
+     }
+   }
  }
+
+  @media (max-width: 1050px) {
+    .product-details {
+      &__inner {
+        display: block;
+      }
+      &__thumb {
+        display: none;
+      }
+      &__big {
+        margin: 0 auto;
+      }
+      &__slide {
+        width: 100%;
+        justify-content: center;
+        margin: 0 auto;
+        margin-bottom: 20px;
+      }
+      &__content {
+        width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 920px) {
+    .products {
+      &__item {
+        margin: 0 auto;
+      }
+    }
+  }
 
  @media (max-width: 860px) {
    .success {
@@ -69,6 +122,9 @@
      &__people {
        grid-template-columns: repeat(1, 1fr);
      }
+   }
+   .product-details {
+     padding: 60px 0;
    }
  }
 
@@ -90,6 +146,23 @@
         padding: 60px 0;
       }
     } 
+    .blog-page {
+      &__img {
+        height: 370px;
+      }
+    }
+    .product-tabs {
+      &__top {
+        display: flex;
+        flex-direction: column;
+      }
+      &__item {
+        margin-bottom: 10px;
+      }
+    } 
+    .product-tabs__item+.product-tabs__item {
+      margin-left: 0;
+    }
   }
 
   @media (max-width: 570px) {
@@ -108,6 +181,41 @@
       &__item {
         max-height: 380px;
         padding: 40px 25px;
+      }
+    }
+    .blog-page {
+      &__img {
+        height: 300px;
+      }
+      &__box {
+        padding: 15px;
+      }
+      &__title {
+        font-size: 32px;
+        line-height: 36px;
+      }
+    }
+    .blog-one {
+      &__author {
+        display: block;
+      }
+      &__img-left {
+        display: none;
+      }
+      &__author-left {
+        margin-bottom: 20px;
+      }
+      &__text h4 {
+        font-size: 32px;
+        line-height: 36px;
+      }
+    }
+    .blog-comments {
+      &__item-img {
+        display: none;
+      }
+      &__item--response {
+        margin-left: 50px;
       }
     }
   }
@@ -148,5 +256,27 @@
      }
      .conditions {
        padding: 60px 0;
+     }
+     .product-details {
+       &__btn {
+         margin-left: 0;
+         display: block;
+         margin-top: 20px;
+       }
+       &__slide {
+         width: 60%;
+       }
+       &__big-box {
+         width: 250px;
+         height: 330px;
+         margin: 0 auto;
+       }
+       &__big-item {
+         height: 440px;
+         width: 300px !important;
+       }
+       &__big {
+         width: 300px;
+       }
      }
    }

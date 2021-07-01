@@ -4,10 +4,38 @@ $(function(){
     $('.menu__list').toggleClass('menu__list--active');
   });
 
-  // $('.related__content').slick({
-    
-
-  // });
+  $('.related__content').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: true,
+    // draggable: false,
+    // variableWidth: true,
+    prevArrow: $('.related__btn-prev'),
+    nextArrow: $('.related__btn-next'),
+    responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+      }
+    },
+    {
+      breakpoint: 920,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      }
+    },
+    {
+      breakpoint: 630,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      }
+    },
+   ]
+  });
 
   $('.product-tabs__item').on('click', function(e){
     e.preventDefault();

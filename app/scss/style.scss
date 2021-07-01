@@ -676,6 +676,7 @@
     font-size: 16px;
     line-height: 30px;
     color: #243f4d;
+    width: 100%;
 
     a {
       color: #243f4d;
@@ -866,8 +867,9 @@
   }
 
   &__content {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    // display: grid;
+    // grid-template-columns: repeat(4, 1fr);
+    display: flex;
   }
 }
 

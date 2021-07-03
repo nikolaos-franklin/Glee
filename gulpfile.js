@@ -78,8 +78,17 @@ function images(){
 
 function build() {
   return src([
+    'app/fonts/**',
     'app/**/*.html',
     'app/css/style.min.css',
+    'app/css/about.min.css',
+    'app/css/blog-one.min.css',
+    'app/css/blog.min.css',
+    'app/css/conditions.min.css',
+    'app/css/index.min.css',
+    'app/css/login.min.css',
+    'app/css/product-details.min.css',
+    'app/css/product-list.min.css',
     'app/js/main.min.js'
   ], {base: 'app'})
   .pipe(dest('dist'))

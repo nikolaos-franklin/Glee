@@ -63,6 +63,14 @@ $(function(){
     asNavFor: '.product-details__thumb',
     draggable: false,
     arrows: false,
+    responsive: [
+    {
+      breakpoint: 1050,
+      settings: {
+        autoplay: true,
+      }
+    },
+   ]
   });
 
   $('.product-content__filter-btn').on('click', function(){
